@@ -34,7 +34,7 @@ const Search = ({movies,AddFilm}) => {
           onChange = {e=>setSearchField(e.target.value)}    />
           <Rate rating={searchRate} setSearchRate={setSearchRate}/>
     </Form>
-    {/* <Add AddFilm={AddFilm}/> */}
+    <Add AddFilm={AddFilm}/>
   </Navbar>
   <Main filtredMovie={filtredMovie }  AddFilm={AddFilm}/>
         </div>
