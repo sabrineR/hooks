@@ -5,6 +5,8 @@ import { film} from './data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Main } from './Components/Main/Main';
 import Search from './Components/Header/Search';
+import { Route, Switch } from 'react-router-dom';
+import Film from './Components/Film/Film';
 
 function App() {
   
@@ -18,9 +20,19 @@ function App() {
  
   return (
     <div className="App">
-   
-      <Search movies={movies} AddFilm={AddFilm} />
+    {/* <Search movies={movies} AddFilm={AddFilm} /> */}
       
+   <Switch>
+      <Route exact path="/" render={()=>
+      <Search movies={movies} AddFilm={AddFilm} />}/>
+    
+
+      <Route exact path="/movie/:name" render={(defaultProps)=>
+      (<Film {...defaultProps} movies={film}  />
+      )} 
+      />
+    </Switch>
+     
     </div>
   );
 }

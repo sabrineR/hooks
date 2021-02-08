@@ -8,9 +8,7 @@ export const MovieCard = ({movie}) => {
   <Card.Img variant="top" src={movie.posterUrl} />
   <Card.Body>
     <Card.Title>{movie.title}</Card.Title>
-    <Card.Text>
-      {movie.description}
-    </Card.Text>
+    
     <Card.Text>
       {/* {movie.rate} */}
      <Rate rating={movie.rate} />

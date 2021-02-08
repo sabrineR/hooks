@@ -5,6 +5,7 @@ import {InputGroup  } from "react-bootstrap";
 import './search.css'
 import { Navbar,Button,Nav,Form,FormControl} from "react-bootstrap";
 import Add from '../Main/Add/Add';
+import { NavLink } from 'react-router-dom';
 
 
 const Search = ({movies,AddFilm}) => {
@@ -25,9 +26,8 @@ const Search = ({movies,AddFilm}) => {
        <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="#home">Film</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home"></Nav.Link>
-      <Nav.Link href="#features"></Nav.Link>
-      <Nav.Link href="#pricing"></Nav.Link>
+      
+      <NavLink to="/">Home</NavLink>
     </Nav>
     <Form inline>
     <FormControl aria-describedby="basic-addon1" placeholder = "Search Movie" 
